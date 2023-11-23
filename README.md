@@ -295,8 +295,11 @@ module.exports = {
 资源模块类型 Asset Modules type 分为四种：
 
 asset/resource 发送一个单独的文件并导出 URL，之前通过使用 file-loader 实现
+
 asset/inline 导出一个资源的 data URI，之前通过使用 url-loader 实现
+
 asset/source 导出资源的源代码，之前通过使用 raw-loader 实现
+
 asset 在导出一个 data URI 和发送一个单独的文件之间自动选择，之前通过使用 url-loader 实现，并且可以配置资源体积限制
 
 ```js
@@ -415,7 +418,7 @@ module.exports = merge(baseConfig, {
 const path = require("path")
 
 resolve: {
-    extensions: [".vue", "ts"], // 一定程度上影响 webpack 的运行效率
+    extensions: [".vue", ".ts"], // 一定程度上影响 webpack 的运行效率
      alias: {
       "@": path.resolve(__dirname, "../src"),
     },
